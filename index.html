@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Management System - 3-Tier</title>
+  <link rel="stylesheet" href="style.css" />
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <!--
+    3-Tier Architecture:
+      Tier 1: Presentation Layer (app.js + components/*.js)
+      Tier 2: Business Layer (business.js)
+      Tier 3: Data Layer (data.js)
+  -->
+  <div id="root"></div>
+
+  <!-- Load in order: Service (Tier 3) → Components (Tier 1) → App (Tier 1) -->
+  <script type="text/babel" src="services/EmployeeService.js"></script>
+  <script type="text/babel" src="components/SearchBar.js"></script>
+  <script type="text/babel" src="components/EmployeeTable.js"></script>
+  <script type="text/babel" src="components/EmployeeForm.js"></script>
+  <script type="text/babel" src="app.js"></script>
+</body>
+</html>
