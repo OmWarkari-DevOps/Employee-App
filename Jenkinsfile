@@ -56,7 +56,7 @@ pipeline {
         stage('docker push') {
             steps {
                 sh '''
-                docker push omwarkari123/$APP_NAME:1.0
+                docker push omwarkri123/$APP_NAME:1.0
                 '''
 
             }
