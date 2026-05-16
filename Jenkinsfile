@@ -48,7 +48,7 @@ pipeline {
         stage('docker tag') {
             steps {
                 sh '''
-                docker tag $APP_NAME:latest $APP_NAME:1.0
+                docker tag $APP_NAME:latest omwarkari123/$APP_NAME:1.0
                 '''
 
             }
@@ -56,7 +56,7 @@ pipeline {
         stage('docker push') {
             steps {
                 sh '''
-                docker push $APP_NAME:latest omwarkari123/$APP_NAME:1.0
+                docker push omwarkari123/$APP_NAME:1.0
                 '''
 
             }
