@@ -6,6 +6,9 @@ pipeline {
         APP_NAME = "employee-management-system"
         CONTAINER_NAME = "employee-app-container"
         DOCKER_COMPOSE_FILE = "docker-compose.yml"
+        DOCKERHUB_USERNAME = "omwarkri123"
+        IMAGE_TAG = "1.0"
+
     }
 
     stages {
@@ -48,7 +51,7 @@ pipeline {
         stage('docker tag') {
             steps {
                 sh '''
-                docker tag $APP_NAME:latest omwarkari123/$APP_NAME:1.0
+                docker tag $APP_NAME:latest omwarkri123/$APP_NAME:1.0
                 '''
 
             }
